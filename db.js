@@ -1,6 +1,6 @@
 const { MongoClient } = require("mongodb");
 
-const client = new MongoClient('mongodb+srv://Project1sree:Project19686@cluster0.upccyc9.mongodb.net/EMPLOYEES_DATA')
+const client = new MongoClient(`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@cluster0.upccyc9.mongodb.net/EMPLOYEES_DATA`)
 const PORT = process.env.PORT || 3000
 
 const start = async () => {
