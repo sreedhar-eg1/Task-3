@@ -16,7 +16,7 @@ const insertEmployee = async (req, res) => {
 
     if (employee) {
       return res
-        .status(200)
+        .status(409)
         .json({
           success: true,
           message: "Employee with this User ID already exists",
